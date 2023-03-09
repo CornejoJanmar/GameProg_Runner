@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectableCollision : MonoBehaviour
+public class PortalScript : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            this.gameObject.SetActive(false);
+            Debug.Log("Passed A Portal!");
         }
-        
     }
 }

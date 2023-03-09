@@ -27,11 +27,12 @@ public class PlayerMovement : MonoBehaviour
         if (IsCrawling == true)
         {
             Anim.SetBool("IsCrawling", true);
-        }   
+        }
     }
 
     public void CollisionHit()
     {
         IsCrawling = true;
+
     }
 }

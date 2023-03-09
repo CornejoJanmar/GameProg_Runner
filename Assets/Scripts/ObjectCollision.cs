@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ObjectCollision : MonoBehaviour
 {
-    [SerializeField] GameObject Player;
-    [SerializeField] PlayerMovement Pm;
-
     private void OnCollisionEnter(Collision collision)
     {
-        Pm.GetComponent<PlayerMovement>().CollisionHit();
+        if(collision.gameObject.tag == "Player")
+        {            
+            Debug.Log("Player Hit!");
+        }
+
     }
 }
