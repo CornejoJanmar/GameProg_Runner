@@ -37,10 +37,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 Anim.SetBool("IsCrawling", true);
             }
-            else
-            {
-                Anim.SetBool("IsCrawling", false);
-            }
         }
 
         if (floating == true)
@@ -81,6 +77,10 @@ public class PlayerMovement : MonoBehaviour
         if(PlayerHitCount >= 1)
         {
             PlayerHitCount -= 1;
+            if(PlayerHitCount == 0)
+            {
+                Anim.SetBool("IsCrawling", false);
+            }
         }
     }
 
